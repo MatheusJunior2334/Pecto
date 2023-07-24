@@ -31,12 +31,16 @@ $color1: #000; //Texto e outros
     }
 
     div {
-        display: flex;
-        column-gap: 25px;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        grid-template-rows: auto;
+        justify-items: center;
+        align-items: center;
         row-gap: 50px;
-        padding: 15px 10px;
+
+        @media only screen and (max-width: 480px) {
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        }
     }
 }
 
