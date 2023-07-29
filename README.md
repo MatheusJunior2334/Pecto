@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Pecto (do latim, cartas)
+A Pecto é uma plataforma revolucionária que visa dar voz àqueles que não se comunicam através da fala. Com base em visitas realizadas às Casas André Luiz e na realidade encontrada lá, desenvolvemos uma solução tecnológica que permite a comunicação eficiente por meio de um sistema de cards. Esses cards, separados por categorias, emitem sons de uma voz humanizada ao serem pressionados.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://github.com/PectoOficial/Pecto/assets/106604805/23a25ef4-cb1a-49b1-9272-48f23d581386)
 
-## Available Scripts
+## Funcionalidades Principais
+<ul>
+  <li>Plataforma web que permite a comunicação por meio de cards.</li>
+  <li>Cards separados por categorias (formalidade, desejos e sentimentos).</li>
+  <li>Ao pressionar um card, um som com uma voz humanizada é emitido.</li>
+  <li>Blog com notícias atualizadas relacionadas a pessoas com dificuldades de comunicação.</li>
+  <li>Sistema para movimentação do mouse com reconhecimento facial para usuários com dificuldades motoras.</li>
+</ul>
 
-In the project directory, you can run:
+<h2>Tecnologias Utilizadas</h2>
+<li>Frontend: ReactJS, CSS, Sass, Figma</li>
+<li>Backend: Java, Spring Boot</li>
+<li>Banco de Dados: MySQL</li>
+<li>Bibliotecas: Axios</li>
+<li>Sistema de Movimentação do Mouse: Python, OpenCV</li>
 
-### `npm start`
+<h3>Requisitos</h3>
+Para utilizar a Pecto, é necessário ter acesso à internet e acessar o site https://demoday-seven.vercel.app/.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h3>Relatar Bugs e Solicitar Funcionalidades</h3>
+Se você encontrar algum bug ou desejar solicitar novas funcionalidades, envie um e-mail para pecto.comunicacao@gmail.com.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Equipe de Desenvolvimento
+<h3>A equipe de frontend é composta por:</h3>
 
-### `npm test`
+| ![Matheus Júnior](https://avatars.githubusercontent.com/u/124627522?v=4) | ![Milleny-Nogueira](https://avatars.githubusercontent.com/u/98055313?v=4) | ![IgorAlvesSG](https://avatars.githubusercontent.com/u/126509797?v=4) | ![KetelynSousa](https://avatars.githubusercontent.com/u/126901953?v=4) |
+| :---------------------------------------------------------------------: | :--------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
+|                             Matheus Júnior                              |                              Milleny Nogueira                              |                              Igor Alves                              |                              Ketelyn Sousa                            |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h3>Já a equipe de backend é composta por:</h3>
 
-### `npm run build`
+| ![Hitalo Jacome](https://avatars.githubusercontent.com/u/106604805?v=4) | ![Gabriel Souza de Carvalho Lima](https://avatars.githubusercontent.com/u/57369170?v=4) | ![Jonatas-Anjos](https://avatars.githubusercontent.com/u/126903762?v=4) | ![Cassia204](https://avatars.githubusercontent.com/u/80729936?v=4) |
+| :---------------------------------------------------------------------: | :--------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
+|                             Hitalo Jacome                              |                              Gabriel Souza de Carvalho Lima                             |                              Jonatas Anjos                              |                              Cassia Santos                           |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Agradecemos o seu interesse em conhecer a Pecto e esperamos que essa plataforma possa proporcionar independência e comunicação para aqueles que precisam.
