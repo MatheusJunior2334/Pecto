@@ -1,0 +1,257 @@
+@import '../../index.scss';
+
+//Variáveis
+
+@mixin planosTitleSize {
+    font-size: 36px;
+    font-weight: normal;
+    font-family: simply_rounded;
+    color: $color-text-primary-black;
+
+    @media #{$larger-screens} {
+        font-size: 38px;
+    }
+
+    @media #{$tablet} {
+        font-size: 32px;
+    }
+
+    @media #{$mobile} {
+        font-size: 26px;
+    }
+}
+
+@mixin planosTextSize {
+    font-size: 24px;
+    font-family: cocogoose;
+    color: $color-text-primary-black;
+
+    @media #{$larger-screens} {
+        font-size: 26px;
+    }
+
+    @media #{$tablet} {
+        font-size: 22px;
+    }
+
+    @media #{$mobile} {
+        font-size: 20px;
+    }
+}
+
+@mixin planosTextSize2 {
+    font-size: 22px;
+    font-family: cocogoose;
+    color: $color-text-primary-black;
+
+    @media #{$larger-screens} {
+        font-size: 24px;
+    }
+
+    @media #{$tablet} {
+        font-size: 20px;
+    }
+
+    @media #{$mobile} {
+        font-size: 18px;
+    }
+}
+
+//Animações
+
+@keyframes effectPlanos {
+    from {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        transform: scale(1);
+    }
+
+    to {
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+}
+
+//Estilização Principal
+
+#planos {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-bottom: 45px;
+
+    h2 {
+        @include title-primary($color-text-primary-black);
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .planosContainer {
+        width: 98%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        column-gap: 5px;
+        row-gap: 25px;
+        margin: auto;
+
+        //Início - Responsivo
+
+        @media #{$mobile} {
+            width: 100%;
+        }
+
+        //Fim - Responsivo
+
+
+        //Estilização de 'PlanosProps'
+
+        .planoType {
+            width: 390px;
+            height: auto;
+            border-radius: 20px;
+            border: 5px solid;
+
+            //Início - Responsivo
+
+            @media #{$larger-screens} {
+                width: 415px;
+            }
+
+            @media #{$tablet} {
+                width: 340px;
+            }
+
+            @media #{$mobile} {
+                width: 310px;
+            }
+
+            //Fim - Responsivo
+
+            .part1 {
+                width: 85%;
+                height: auto;
+                margin: auto;
+                padding-bottom: 25px;
+                border-bottom: 1px solid;
+
+                h3 {
+                    @include planosTitleSize();
+                    margin-top: 15px;
+                    text-align: center
+                }
+
+                p {
+                    @include planosTextSize();
+                    text-align: center;
+                    margin-top: 20px
+                }
+            }
+
+            .part2 {
+                width: 85%;
+                height: auto;
+                margin: auto;
+                padding-bottom: 25px;
+                border-bottom: 1px solid;
+
+                div {
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                    margin-top: 25px;
+
+                    span {
+                        font-size: 38px;
+                        font-family: inter;
+                        font-weight: 700;
+
+                        //Início - Responsivo
+
+                        @media #{$larger-screens} {
+                            font-size: 40px;
+                        }
+
+                        @media #{$tablet} {
+                            font-size: 34px;
+                        }
+
+                        @media #{$mobile} {
+                            font-size: 28px;
+                        }
+
+                        //Fim - Responsivo
+                    }
+                }
+
+                p {
+                    @include planosTextSize();
+                    font-weight: 600;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+            }
+
+            .part3 {
+                width: 85%;
+                height: auto;
+                margin: auto;
+                padding-bottom: 30px;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 40px;
+
+                    svg {
+                        width: 35px;
+                        height: 35px;
+                    }
+
+                    label {
+                        @include planosTextSize2();
+                        padding-left: 15px;
+                    }
+                }
+            }
+
+            .part4 {
+                width: 80%;
+                height: auto;
+                margin: auto;
+                padding-bottom: 25px;
+                display: flex;
+                justify-content: center;
+
+                button {
+                    width: 90%;
+                    padding: 8px 0;
+                    border-radius: 50px;
+                    font-size: 22px;
+                    font-family: simply_rounded;
+                    text-transform: uppercase;
+                    color: #FFF;
+                    transform: perspective(1px) translateZ(0);
+                    cursor: pointer;
+
+                    //Início - Responsivo
+
+                    @media #{$larger-screens} {
+                        font-size: 24px;
+                    }
+
+                    @media #{$mobile} {
+                        font-size: 20px;
+                    }
+
+                    //Fim - Responsivo
+
+                    &:hover {
+                        animation: effectPlanos 1s alternate infinite;
+                    }
+                }
+            }
+        }
+    }
+}

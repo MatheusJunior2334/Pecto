@@ -1,0 +1,204 @@
+@import "../../index.scss";
+
+#header {
+    display: flex;
+    z-index: 2;
+    position: fixed;
+    flex-direction: row;
+    width: 100%;
+    top: 0;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+
+    //Início - Responsivo
+
+    @media #{$mobile} {
+        height: 60px;
+    }
+
+    /*MENU HAMBURGUER*/
+
+    .menu_faketrigger{
+        position: absolute;
+        z-index: 1000;
+        width: 35px;
+        height: 35px;
+        opacity: 0;
+        top: 0;
+        left: 35px;
+        cursor: pointer;
+
+        //Início - Responsivo
+
+        @media #{$desktop} {
+            margin-left: 0px;
+        }
+
+        //Fim - Responsivo
+
+        &:checked~.menu_lines span:nth-child(1){
+            transform-origin: 0% 0%;
+            transform: rotate(45deg) scale(1.2);
+        }
+
+        &:checked~.menu_lines span:nth-child(2){
+            opacity: 0;
+        }
+
+        &:checked~.menu_lines span:nth-child(3){
+            transform-origin: 0% 100%;
+            transform: rotate(-45deg) scale(1.2);
+        }
+    }
+
+    .menu_lines{
+        width: 35px;
+        height: 35px;
+        margin-left: 35px;
+        cursor: pointer;
+
+        //Início - Responsivo
+
+        @media #{$desktop} {
+            margin-left: 28px;
+        }
+
+        //Fim - Responsivo
+
+        span{
+            display: block;
+            width: 35px;
+            height: 5px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            background-color: #005BBB;
+            transition: all ease .2s;
+        }
+    }
+
+    .menu{
+        position: absolute;
+        display: none;
+        height: auto;
+        width: 250px;
+        top: 143%;
+        left: 0;
+        list-style: none;
+        overflow-y: hidden;
+        padding: 0;
+        margin: 0;
+        border-bottom-right-radius: 50px;
+        filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+
+        //Início - Responsivo
+
+        @media #{$desktop} {
+            width: 200px;
+            height: 400px;
+        }
+
+        @media #{$mobile} {
+            width: 185px;
+            height: 380px;
+        }
+
+        //Fim - Responsivo
+
+        & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+            img{
+                width: 85%;
+                margin: auto;
+                margin: 10px 0;
+
+                //Início - Responsivo
+
+                @media #{$desktop} {
+                    width: 100%;
+                }
+
+                //Fim - Responsivo
+            }
+
+            li{
+                color: #2A4FBF;
+                width: 200px;
+                height: auto;
+                margin: 0;
+                padding: 20px 0 20px 0;
+                border-top: 2px solid #2A4FBF;
+                text-align: center;
+                font-family: simply_rounded;
+                font-size: 25px;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                //Início - Responsivo
+
+                @media #{$desktop} {
+                    width: 170px;
+                    padding: 15px 0;
+                    font-size: 22px;
+                }
+
+                @media #{$mobile} {
+                    width: 150px;
+                    padding: 15px 0;
+                    font-size: 20px;
+                }
+
+                //Fim - Responsivo
+            }
+        }
+    }
+
+    /*FIM DO MENU*/
+
+    .acessibilidade {
+        width: 60px;
+
+        @media #{$mobile} {
+            width: 55px;
+        }
+    }
+
+    .logo {
+        width: auto;
+        height: 65px;
+
+        //Início - Responsivo
+
+        @media #{$desktop} {
+            height: 60px;
+        }
+
+        @media #{$mobile} {
+            height: 12vw;
+            margin: auto;
+        }
+
+        //Fim - Responsivo
+    }
+}
+
+
+
+/* .acessibilidade button{
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    float: left;
+    background-color: #005BBB;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    border: none;
+    margin: 0 3px;
+} */

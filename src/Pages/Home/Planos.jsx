@@ -1,128 +1,88 @@
-import style from './Planos.module.css';
+import styles from './Planos.module.scss';
+import DisponivelImage from './Images/DisponivelImage';
+import IndisponivelImage from './Images/IndisponivelImage';
 
-import disponivel from '../../Images/imagem_disponivel.png';
-import nao_disponivel from '../../Images/imagem_nao_disponivel.png';
+
+const PlanosProps = ({cor, tipoPlano, descricao, valor, disponiveis, indisponiveis, botao}) => {
+
+    return (
+        <div className={styles.planoType} style={{borderColor: cor}}>
+
+            <div className={styles.part1} style={{borderColor: cor}}>
+                <h3 style={{ color: cor }}>{tipoPlano}</h3>
+                <p>{descricao}</p>
+            </div>
+
+            <div className={styles.part2} style={{borderColor: cor}}>
+                <div>
+                    <span style={{color: cor}}>R$</span>
+                    <span style={{color: cor}}>{valor}</span>
+                </div>
+                <p style={{color: cor}}>por mês</p>
+            </div>
+
+            <div className={styles.part3}>
+                {disponiveis.map((texto, index) => (
+                    <div key={index}>
+                        <DisponivelImage />
+                        <label>{texto}</label>
+                    </div>
+                ))}
+                {indisponiveis.map((texto, index) => (
+                    <div key={index}>
+                        <IndisponivelImage />
+                        <label>{texto}</label>
+                    </div>
+                ))}
+            </div>
+
+            <div className={styles.part4}>
+                <button style={{backgroundColor: cor}}>{botao}</button>
+            </div>
+        </div>
+    )
+}
 
 function Planos() {
+
     return (
-        <section id={style.planos}>
-            <h1 id={style.planos_h1}>Escolha o seu plano</h1>
-            <article id={style.pagamentos}>
+        <section id={styles.planos}>
+            <h2>Escolha o seu plano</h2>
 
-                {/*Demo */}
+            <div className={styles.planosContainer}>
+                {/*Primeiro Plano*/}
+                <PlanosProps
+                    cor='#008AFF'
+                    tipoPlano='Demo'
+                    descricao='Para pessoas que querem conhecer os nosso serviços'
+                    valor='0,00'
+                    disponiveis={['Cartas prontas para uso', 'Acesso à vozes pré-gravadas']}
+                    indisponiveis={['Criação e personalização de cards', 'Suporte a qualquer momento', 'Personalização das vozes']}
+                    botao='começar'
+                />
 
-                <div className={`${style.line1} ${style.comum}`} >
-                    <div className={style.part1}>
-                        <h2>Demo</h2>
-                        <p>Para pessoas que querem conhecer os nossos serviços</p>
-                    </div>
-                    <div className={style.part2}>
-                        <div><h1>R$</h1><h1>0,00</h1></div>
-                        <p>por mês</p>
-                    </div>
-                    <div className={style.part3}>
-                        <div className={style.disponivel}>
-                            <img src={disponivel} alt="recurso disponível nesse plano" />
-                            <label>Cartas prontas para uso</label>
-                        </div>
-                        <div className={style.disponivel}>
-                            <img src={disponivel} alt="recurso disponível nesse plano" />
-                            <label>Acesso à vozes pre-gravadas</label>
-                        </div>
-                        <div className={style.disponivel}>
-                            <img src={nao_disponivel} alt="recurso disponível nesse plano" />
-                            <label>Criação e personalização de cards</label>
-                        </div>
-                        <div className={style.nao_disponivel}>
-                            <img src={nao_disponivel} alt="recurso não disponível nesse plano" />
-                            <label>Suporte a qualquer momento</label>
-                        </div>
-                        <div className={style.nao_disponivel}>
-                            <img src={nao_disponivel} alt="recurso não disponível nesse plano" />
-                            <label>Personalização das vozes</label>
-                        </div>
-                    </div>
-                    <div className={style.part4}>
-                        <button id={style.comecar}>COMEÇAR</button>
-                    </div>
-                </div>
+                {/*Segundo Plano*/}
+                <PlanosProps
+                    cor='#008AFF'
+                    tipoPlano='Plus'
+                    descricao='Para pessoas que querem um gostinho a mais'
+                    valor='25,00'
+                    disponiveis={['Cartas prontas para uso', 'Acesso à vozes pré-gravadas','Criação e personalização de cards']}
+                    indisponiveis={['Suporte a qualquer momento', 'Personalização das vozes']}
+                    botao='começar'
+                />
 
-                {/*Plus*/}
-
-                <div className={`${style.line1} ${style.comum}`}>
-                    <div className={style.part1}>
-                        <h2>Plus</h2>
-                        <p>Para pessoas que querem um gostinho a mais</p>
-                    </div>
-                    <div className={style.part2}>
-                        <div><h1>R$</h1><h1>25,00</h1></div>
-                        <p>por mês</p>
-                    </div>
-                    <div className={style.part3}>
-                        <div className={style.disponivel}>
-                            <img src={disponivel} alt="recurso disponível nesse plano" />
-                            <label>Cartas prontas para uso</label>
-                        </div>
-                        <div className={style.disponivel}>
-                            <img src={disponivel} alt="recurso disponível nesse plano" />
-                            <label>Acesso à vozes pré-gravadas</label>
-                        </div>
-                        <div className={style.disponivel}>
-                            <img src={disponivel} alt="recurso disponível nesse plano" />
-                            <label>Criação e personalização de cards</label>
-                        </div>
-                        <div className={style.nao_disponivel}>
-                            <img src={nao_disponivel} alt="recurso não disponível nesse plano" />
-                            <label>Suporte a qualquer momento</label>
-                        </div>
-                        <div className={style.nao_disponivel}>
-                            <img src={nao_disponivel} alt="recurso não disponível nesse plano" />
-                            <label>Personalização das vozes</label>
-                        </div>
-                    </div>
-                    <div className={style.part4}>
-                        <button id={style.comecar}>COMEÇAR</button>
-                    </div>
-                </div>
-
-                {/*Premium*/}
-
-                <div className={style.line1} id={style.premium}>
-                    <div className={style.part1}>
-                        <h2>Premium</h2>
-                        <p>Tenha o poder de personalizar os diferentes recursos do site</p>
-                    </div>
-                    <div className={style.part2}>
-                        <div><h1>R$</h1><h1>50,00</h1></div>
-                        <p>por mês</p>
-                    </div>
-                    <div className={style.part3}>
-                        <div className={style.disponivel}>
-                            <img src={disponivel} alt="recurso disponível nesse plano" />
-                            <label>Cartas prontas para uso</label>
-                        </div>
-                        <div className={style.disponivel}>
-                            <img src={disponivel} alt="recurso disponível nesse plano" />
-                            <label>Acesso à vozes pré-gravadas</label>
-                        </div>
-                        <div className={style.disponivel}>
-                            <img src={disponivel} alt="recurso disponível nesse plano" />
-                            <label>Criação e personalização de cards</label>
-                        </div>
-                        <div className={style.disponivel}>
-                            <img src={disponivel} alt="recurso disponível nesse plano" />
-                            <label>Suporte a qualquer momento</label>
-                        </div>
-                        <div className={style.disponivel}>
-                            <img src={disponivel} alt="recurso disponível nesse plano" />
-                            <label>Personalização das vozes</label>
-                        </div>
-                    </div>
-                    <div className={style.part4}>
-                        <button id={style.acesse_agora}>ACESSE AGORA</button>
-                    </div>
-                </div>
-            </article>
+                {/*Terceiro Plano*/}
+                <PlanosProps
+                    cor='#FF9800'
+                    tipoPlano='Premium'
+                    descricao='Tenha o poder de personalizar os diferentes recursos do site'
+                    valor='50,00'
+                    disponiveis={['Cartas prontas para uso', 'Acesso à vozes pré-gravadas','Criação e personalização de cards','Suporte a qualquer momento', 'Personalização das vozes']}
+                    indisponiveis={[]}
+                    botao='acesse agora'
+                />
+            </div>
         </section>
     )
 }

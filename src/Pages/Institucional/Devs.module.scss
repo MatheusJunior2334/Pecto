@@ -1,0 +1,38 @@
+@import "../../index.scss";
+
+#Devs{
+    padding: 25px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    //Início - Responsivo
+
+    @media #{$tablet} {
+        padding: 25px;
+    }
+
+    @media #{$mobile} {
+        padding: 15px;
+    }
+
+    //Fim - Responsivo
+
+    .tituloDevs{
+        @include title-primary($color-text-alternative-orange3);
+    }
+
+    .textoDevs{
+        @include text-primary($color-text-primary-black);
+        text-align: justify;
+
+        .anoDevs{
+            @include text-secondary($color-text-primary-black);
+        }
+    }
+    
+    .imgDevs{
+        width: 99.2%;
+        height: 99.2%;
+    }
+}

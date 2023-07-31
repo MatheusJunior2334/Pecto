@@ -1,0 +1,149 @@
+@import '../../index.scss';
+
+//Variáveis
+
+$comentarioWindowSize: "(max-width: 1050px)";
+
+@mixin comentarioTitle() {
+    font-size: 40px;
+    font-weight: normal;
+    font-family: cocogoose;
+
+    @media #{$comentarioWindowSize} {
+        font-size: 35px;
+    }
+
+    @media #{$tablet} {
+        font-size: 32px;
+    }
+
+    @media #{$mobile} {
+        font-size: 30px;
+    }
+}
+
+@mixin comentarioText() {
+    font-size: 22px;
+    font-family: cocogoose;
+    color: $color-text-primary-black;
+
+    @media #{$mobile} {
+        font-size: 20px;
+    }
+}
+
+//Estilização principal
+
+#comentario_section {
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: row !important;
+    margin: auto;
+    padding-bottom: 20px;
+
+    .comentario_part1 {
+        width: 75%;
+
+        //Início - Responsivo
+
+        @media #{$tablet} {
+            width: 80%;
+        }
+
+        @media #{$mobile} {
+            width: 100%;
+        }
+
+        //Fim - Responsivo
+
+        .input_principal {
+            width: 98%;
+            border: 1px solid #BBB;
+            border-radius: 10px;
+            padding: 1%;
+            font-size: 15px;
+            font-family: inter;
+        }
+
+        h2 {
+            @include comentarioTitle();
+        }
+
+        p {
+            @include comentarioText();
+            color: #333;
+            margin-top: 15px;
+        }
+
+        textarea {
+            width: 98%;
+            border: 1px solid #BBB;
+            border-radius: 10px;
+            padding: 1%;
+            font-size: 15px;
+            font-family: inter;
+            resize: vertical;
+        }
+
+        .salvar_informacao {
+            display: flex;
+            align-items: center;
+
+            input {
+                width: 20px;
+                height: 20px;
+            }
+
+            label {
+                font: 18px cocogoose;
+                padding-left: 10px;
+            }
+        }
+
+        .comentario_submit {
+            @include text-primary($color-text-primary-white);
+            width: 98%;
+            margin-top: 15px;
+            padding: 10px 0;
+            border-radius: 10px;
+            background-color: #055BBB;
+
+            //Início - Responsivo
+
+            @media #{$tablet} {
+                padding: 8px 0;
+            }
+
+            @media #{$mobile} {
+                padding: 5px 0;
+            }
+
+            //Fim - Responsivo
+        }
+    }  
+    
+    .comentario_part2 {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        //Início - Responsivo
+
+        @media #{$tablet} {
+            width: 20%;
+        }
+
+        @media #{$mobile} {
+            display: none;
+        }
+
+        //Fim - Responsivo
+
+        img {
+            width: 85%;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+@import './App.scss';
+
+//Variáveis CSS
+
+$color-text-primary-black: #434343;
+$color-text-primary-white: #FFF;
+$color-text-alternative-blue: #008AFF; 
+$color-text-alternative-orange1: #FF9800;
+$color-text-alternative-orange2: #FBB821;
+$color-text-alternative-orange3: #FFB000;
+
+//Variáveis - Media Query
+
+$larger-screens: "(min-width: 1500px)";
+$desktop: "(max-width: 1280px)";
+$laptop: "(max-width: 1100px)";
+$tablet: "(max-width: 768px)";
+$mobile: "(max-width: 480px)";
+
+
+//Título principal da página
+
+@mixin title-primary($text-color) {
+    font-size: 52px;
+    font-family: simply_rounded;
+    font-weight: normal;
+    color: $text-color;
+
+    @media #{$larger-screens} {
+        font-size: 54px;
+    }
+
+    @media #{$desktop} {
+        font-size: 38px;
+    }
+
+    @media #{$tablet} {
+        font-size: 32px;
+    }
+
+    @media #{$mobile} {
+        font-size: 30px;
+    }
+}
+
+
+//Texto principal da página
+
+@mixin text-primary($text-color) {
+    font-size: 26px;
+    font-family: cocogoose;
+    color: $text-color;
+
+    @media #{$larger-screens} {
+        font-size: 28px;
+    }
+
+    @media #{$desktop} {
+        font-size: 24px;
+    }
+
+    @media #{$tablet} {
+        font-size: 22px;
+    }
+
+    @media #{$mobile} {
+        font-size: 20px;
+    }
+}
+
+
+//Texto secundário da página - span (números)
+
+@mixin text-secondary($text-color) {
+    font-size: 24px;
+    font-family: inter;
+    font-weight: 500;
+    color: $text-color;
+
+    @media #{$larger-screens} {
+        font-size: 26px;
+    }
+
+    @media #{$desktop} {
+        font-size: 23px;
+    }
+
+    @media #{$laptop} {
+        font-size: 22px;
+    }
+}

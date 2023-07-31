@@ -11,7 +11,7 @@ import Pessoa from './Pessoa';
 
 //Imagens gerais da página
 
-import logo from '../../Images/logo.png';
+import logo from '../Home/Images/LogoPecto.png';
 import home from '../../Images/Home_demo.png';
 import cards_demo from '../../Images/Cards_demo.png';
 import seta2 from '../../Images/Seta2_demo.png';

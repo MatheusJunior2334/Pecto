@@ -1,0 +1,47 @@
+/*CSS Reset*/
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*Fontes*/
+
+@font-face {
+  font-family: simply_rounded;
+  src: url("./Fonts/simply_rounded/Simply\ Rounded.ttf");
+}
+
+@font-face {
+  font-family: cocogoose;
+  src: url("./Fonts/cocogoose_classic/Cocogoose-Classic-Medium-trial.ttf");
+}
+
+@font-face {
+  font-family: cocogoose_bold;
+  src: url("./Fonts/cocogoose_classic/Cocogoose-Classic-ExtraBold-trial.ttf");
+}
+
+@font-face {
+  font-family: inter;
+  src: url("./Fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+/*SCROLL*/
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #008AFF;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #FF9800;
+  border-radius: 20px;
+  border: 3px solid #FF9800;
+}

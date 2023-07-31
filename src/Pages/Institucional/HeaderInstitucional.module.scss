@@ -1,0 +1,29 @@
+@import "../../index.scss";
+
+#Headerinstitucional{
+    width: 100%;
+    height: 350px;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    background-image: url('./Images/mulherCadeirante.png');
+    background-position: center;
+
+    h2 {
+        @include title-primary($color-text-primary-white);
+        text-align: center;
+    }
+
+    h3{
+        @include text-primary($color-text-primary-white);
+        text-align: center;
+        font-weight: normal;
+
+        span{
+            @include text-secondary($color-text-primary-white);
+            font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,224 @@
+@import '../../index.scss';
+
+//Variáveis
+
+$section3Size: "(max-width: 900px)";
+
+//Estilizações
+
+#comunicacaoSection {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #008AFF;
+    margin-bottom: 25px;
+
+    .comunicacaoTopo {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0;
+
+        //Início - Responsivo
+
+        @media #{$section3Size} {
+            width: 95%;
+            margin: auto;
+        }
+
+        @media #{$tablet} {
+            width: 97%;
+        }
+
+        @media #{$mobile} {
+            width: 90%;
+        }
+
+        //Fim - Responsivo
+
+        svg {
+            &:first-child {
+                width: 5.5%;
+                padding-bottom: 4%;
+
+                //Início - Responsivo
+
+                @media #{$section3Size} {
+                    display: none;
+                }
+
+                //Fim - Responsivo
+            }
+
+            &:last-child {
+                width: 7.5%;
+                margin-left: 5.5%;
+
+                //Início - Responsivo
+    
+                @media #{$desktop} {
+                    width: 7%;
+                    margin-left: 4%;
+                }
+    
+                @media #{$laptop} {
+                    width: 6%;
+                    margin-left: 2%;
+                }
+    
+                @media #{$section3Size} {
+                    width: 8%;
+                    margin-left: 1%;
+                }
+    
+                @media #{$tablet} {
+                    display: none;
+                }
+
+                //Fim - Responsivo
+            }
+        }
+
+        h2 {
+            @include title-primary($color-text-primary-white);
+            text-align: center;
+
+            //Início - Responsivo
+
+            @media #{$tablet} {
+                text-align: left;
+            }
+
+            @media #{$mobile} {
+                text-align: left;
+            }
+
+            //Fim - Responsivo
+        }
+    }
+
+    .comunicacaoInferior {
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        padding: 25px 0;
+
+        //Início - Responsivo
+
+        @media #{$tablet} {
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        //Fim - Responsivo
+
+        .part1 {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15%;
+
+            //Início - Responsivo
+
+            @media #{$tablet} {
+                width: 90%;
+                margin: auto;
+                gap: 10px;
+            }
+
+            @media #{$mobile} {
+                width: 95%;
+            }
+
+            //Fim - Responsivo
+
+            div {
+                display: flex;
+                gap: 20px;
+
+                svg {
+                    width: 15%;
+
+                    @media #{$tablet} and (min-width: 481px) {
+                        width: 12%;
+                    }
+                }
+
+                p {
+                    @include text-primary($color-text-primary-white);
+                    width: 45%;
+                    align-self: center;
+
+                    //Início - Responsivo
+
+                    @media #{$laptop} {
+                        width: 50%;
+                    }
+
+                    @media #{$section3Size} {
+                        width: 55%;
+                    }
+
+                    @media #{$tablet} {
+                        width: 85%;
+                    }
+
+                    @media #{$mobile} {
+                        width: 95%;
+                    }
+
+                    //Fim - Responsivo
+
+                    span {
+                        @include text-secondary($color-text-primary-white);
+
+                        //Início - Responsivo
+
+                        @media #{$section3Size} {
+                            font-size: 20px;
+                        }
+
+                        //Fim - Responsivo
+                    }
+                }
+            }
+        }
+
+        .part2 {
+            width: 55%;
+
+            //Início - Responsivo
+
+            @media #{$tablet} {
+                width: 90%;
+                margin: auto;
+            }
+
+            @media #{$mobile} {
+                width: 95%;
+            }
+
+            //Fim - Responsivo
+
+            img {
+                width: 95%;
+                border-radius: 45px;
+                align-self: center;
+
+                //Início - Responsivo
+
+                @media #{$tablet} {
+                    width: 100%;
+                    border-radius: 30px;
+                }
+
+                //Fim - Responsivo
+            }
+        }
+    }
+}

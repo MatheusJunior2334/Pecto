@@ -21,21 +21,3 @@
     background-color: #F7F7FB;
     margin: auto;
 }
-
-#section1 summary {
-    margin-left: 20px;
-    color: #BB0045;
-    font-size: 18px;
-    padding-top: 10px;
-    font-weight: 100;
-    background-color: #F7F7FB;
-    border-radius: 20px;
-    cursor: pointer;
-}
-
-#section1 details p {
-    margin-left: 20px;
-    color: #726F95;
-    font-size: 14px;
-    background-color: #F7F7FB;
-}

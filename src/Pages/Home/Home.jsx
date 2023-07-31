@@ -1,22 +1,22 @@
-import HeaderBlog from './HeaderBlog';
-import logo from '../../Images/logo.png';
-import Section1Home from './Section1Home';
-import Section2Home from './Section2Home';
+import Header from './Header';
+import logo from './Images/LogoPecto.png';
+import Section1Home from './InitialSectionHome';
+import Section2Home from './DestaquesHome';
 import Section3Home from './Section3Home';
 import Planos from './Planos';
 import Depoimentos from './Depoimentos';
-import FooterBlog from './FooterBlog';
+import Footer from './Footer';
 
 function Home() {
     return (
         <main>
-            <HeaderBlog header_color='rgba(228, 239, 255, 0.95)' header_img={logo} />
+            <Header header_color='rgba(228, 239, 255, 0.95)' header_img={logo} />
             <Section1Home />
             <Section2Home />
             <Section3Home />
             <Planos />
             <Depoimentos />
-            <FooterBlog footer_img={logo} />
+            <Footer footer_img={logo} />
         </main>
     )
 }

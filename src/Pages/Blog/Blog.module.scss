@@ -1,0 +1,17 @@
+@import '../../index.scss';
+
+#section_blog {
+    position: relative;
+    width: 95%;
+    height: auto;
+    margin: auto;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    justify-items: center;
+
+    @media #{$mobile} {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    }
+}

@@ -1,0 +1,85 @@
+@import '../../index.scss';
+
+//Variáveis
+
+$sobreWindowSizes: '(min-width: 320px) and (max-width: 854px)';
+
+//Estilização principal
+
+#Sobre{
+    padding: 0 50px 25px 50px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 200px;
+    row-gap: 50px;
+    align-items: center;
+    margin-top: 50px;
+
+    //Início - Responsivo
+
+    @media #{$tablet} {
+        padding: 0 25px 25px 25px;
+    }
+
+    @media #{$mobile} {
+        padding: 0 15px 25px 15px;
+    }
+
+    //Fim - Responsivo
+
+    //Início - Responsivo
+
+    @media #{$sobreWindowSizes} {
+        grid-template-columns: auto;
+        row-gap: 25px;
+        margin-top: 20px;
+    }
+
+    //Fim - Responsivo
+
+    p{
+        @include text-primary($color-text-primary-black);
+        text-align: left;
+
+        //Início - Responsivo
+
+        @media #{$sobreWindowSizes} {
+            text-align: justify;
+        }
+
+        //Fim - Responsivo
+
+        &:nth-child(4){
+            text-align: right;
+
+            //Início - Responsivo
+
+            @media #{$sobreWindowSizes} {
+                text-align: justify;
+            }
+
+            //Fim - Responsivo
+        }
+
+        //Início - Responsivo
+
+        @media #{$sobreWindowSizes} {
+            text-align: justify;
+        }
+
+        //Fim - Responsivo
+    }
+
+    .imgPai{
+        display: flex;
+        justify-content: center;
+
+        //Início - Responsivo
+
+        @media #{$sobreWindowSizes} {
+            display: none;
+        }
+
+        //Fim - Responsivo
+    }
+}

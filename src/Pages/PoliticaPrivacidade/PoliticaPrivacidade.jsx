@@ -1,17 +1,17 @@
 import style from './PoliticaPrivacidade.module.css';
 
-import HeaderBlog from '../Home/HeaderBlog';
+import Header from '../Home/Header';
 import Section1PeP from './Section1PeP';
-import FooterBlog from '../Home/FooterBlog';
+import Footer from '../Home/Footer';
 
-import logo from '../../Images/logo.png';
+import logo from '../Home/Images/LogoPecto.png';
 
 function PoliticaPrivacidade() {
     return(
         <section id={style.politica_privacidade}>
-            <HeaderBlog header_color='rgba(228, 239, 255, 0.95)' header_img={logo} />
+            <Header header_color='rgba(228, 239, 255, 0.95)' header_img={logo} />
             <Section1PeP />
-            <FooterBlog footer_img={logo} />
+            <Footer footer_img={logo} />
         </section>
     )
 }

@@ -1,0 +1,11 @@
+@import '../../index.scss';
+
+#Institucional {
+    width: 100%;
+    height: auto;
+    margin-top: 65px;
+
+    @media #{$desktop} {
+        margin-top: 60px;
+    }
+}

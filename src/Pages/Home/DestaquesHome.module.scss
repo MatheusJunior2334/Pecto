@@ -1,0 +1,189 @@
+@import '../../index.scss';
+
+//Variáveis
+
+$destaquesSize: "(max-width: 1000px)";
+
+@mixin destaques-title() {
+    font-size: 42px;
+    font-family: simply_rounded;
+    font-weight: normal;
+    color: $color-text-alternative-blue;
+
+    @media #{$desktop} {
+        font-size: 40px;
+    }
+
+    @media #{$laptop} {
+        font-size: 38px;
+    }
+
+    @media #{$tablet} {
+        font-size: 34px;
+    }
+
+    @media #{$mobile} {
+        font-size: 30px;
+    }
+}
+
+//Estilizações
+
+#destaques{
+    width: 92%;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 5%;
+
+    //Início - Responsivo
+
+    @media #{$desktop} {
+        width: 95%;
+    }
+
+    //Fim - Responsivo
+
+    h2 {
+        @include destaques-title();
+        text-transform: uppercase;
+        margin-left: 1%;
+
+        //Início - Responsivo
+
+        @media #{$desktop} {
+            margin-left: 0.5%;
+            margin-left: 25px;
+        }
+
+        @media #{$mobile} {
+            margin-left: 10px;
+            text-align: center;
+        }
+
+        //Fim - Responsivo
+    }
+
+    .bottomLine {
+        width: 70%;
+        height: 3px;
+        margin: 0 0 50px;
+        background: linear-gradient(to right, #008AFF 0, #008AFF 30%, #AAA 0, #AAA 70%);
+
+        //Início - Responsivo
+
+        @media #{$desktop} {
+            width: 650px;
+            height: 3px;
+            margin: 0 0 50px 25px;
+            background: linear-gradient(to right, #008AFF 0, #008AFF 33%, #AAA 0, #AAA 67%);
+        }
+
+        @media #{$destaquesSize} {
+            width: 500px;
+            height: 3px;
+            margin: 0 0 50px 25px;
+            background: linear-gradient(to right, #008AFF 0, #008AFF 42%, #AAA 0, #AAA 58%);
+        }
+
+        @media #{$tablet} {
+            width: 350px;
+            height: 3px;
+            margin: 0 0 50px 25px;
+            background: linear-gradient(to right, #008AFF 0, #008AFF 50%, #AAA 0, #AAA 50%);
+        }
+
+        @media #{$mobile} {
+            width: 300px;
+            height: 3px;
+            margin: auto;
+            margin-bottom: 35px;
+            background: linear-gradient(to right, #AAA 0, #008AFF 82%, #AAA 0, #AAA 15%);
+        }
+
+        //Fim - Responsivo
+    }
+
+    .posts{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+        justify-items: center;
+
+        //Início - Responsivo
+
+        @media #{$destaquesSize} {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        @media #{$tablet} {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        @media #{$mobile} {
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        }
+
+        //Fim - Responsivo
+
+        .posts_img {
+            height: 350px;
+            width: 375px;
+            display: flex;
+            align-items: flex-end;
+            margin: 10px 0;
+            filter:grayscale(0.4);
+            border-radius: 25px;
+            cursor: pointer;
+
+            //Início - Responsivo
+
+            @media #{$desktop} {
+                width: 310px;
+                height: 290px;
+            }
+
+            @media #{$destaquesSize} {
+                width: 260px;
+                height: 245px;
+            }
+
+            @media #{$tablet} {
+                width: 220px;
+                height: 205px;
+            }
+
+            @media #{$mobile} {
+                width: 250px;
+                height: 235px;
+            }
+
+            //Fim - Responsivo
+
+            h3 {
+                @include text-primary($color-text-primary-white);
+                padding: 30px;
+
+                //Início - Responsivo
+
+                @media #{$destaquesSize} {
+                    padding: 15px;
+                }
+
+                //Fim - Responsivo
+            }
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+                filter: brightness(50%);
+                z-index: -1;
+                transition: all 0.3s;
+            }
+
+            &:hover img {
+                filter: brightness(85%);
+            }
+        }
+    }   
+}

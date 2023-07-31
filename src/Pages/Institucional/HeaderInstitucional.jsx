@@ -1,11 +1,11 @@
-import style from './HeaderInstitucional.module.css';
+import style from './HeaderInstitucional.module.scss';
 import React from 'react';
 
 function Headerinstitucional() {
     return (
         <section id={style.Headerinstitucional}>
-            <h1>Conheça a Pecto</h1>
-            <h2>Desde <span className={style.ano}>2023</span> tornando a comunicação acessível</h2>
+            <h2>Conheça a Pecto</h2>
+            <h3>Desde <span className={style.ano}>2023</span> tornando a comunicação acessível</h3>
         </section>
     )
 }
