@@ -1,9 +1,0 @@
-#section_blog {
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 2%;
-}
